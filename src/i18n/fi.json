@@ -13,7 +13,7 @@
   "footer.address.title": "Osoite",
   "footer.address.description": "(lähellä linja-autoasemaa)",
   "footer.address.line": " 20100 Turku, Suomi",
-  "footer.address.open": "Avoinna ke-la 11.00-17.30",
+  "footer.address.open": "Avoinna ti-la 10.30-18.30",
 
   "nav.home": "Koti",
   "nav.hour": "Tilaa Kotiin",
@@ -30,8 +30,8 @@
 
   "hour.title": "Aukioloajat ja tilausmahdollisuudet",
   "hour.operatingHoursText": "Saigon Sandwich Bakery toimii seuraavina aikoina tilauksille Woltissa ja Foodorassa:",
-  "hour.operatingDays1": "Keskiviiko, Torstai, Perjantai ja Lauantai:",
-  "hour.operatingDays2": "Sunnuntai, Maanantai ja Tiistai:",
+  "hour.operatingDays1": "Tiistai, Keskiviiko, Torstai, Perjantai ja Lauantai:",
+  "hour.operatingDays2": "Sunnuntai ja Maanantai:",
   "hour.operatingHours": "Suljettu",
   "hour.orderAvailabilityText": "Voit tehdä tilauksia näinä aikoina seuraavilla alustoilla:",
   "hour.orderOnWolt": "Tilaa Woltissa",
@@ -126,5 +126,18 @@
   "chat.option3": "En tiedä mitä syödä!",
   "chat.answer1": "Kiva tavata sinutkin :)",
   "chat.answer2": "Varma! Voit siirtyä navigointipalkin Tilaa Kotiin ja tilata valitsemalla Wolt tai Foodora!",
-  "chat.answer3": "Suosittelen kokeilemaan Saigon Grilliliha, joka on myymälämme myydyin!"
+  "chat.answer3": "Suosittelen kokeilemaan Saigon Grilliliha, joka on myymälämme myydyin!",
+
+  "special.title": "Erikoistarjoukset",
+  "special.subtitle": "Hyödynnä eksklusiiviset tarjouksemme ja kampanjamme",
+  "special.badge": "Rajoitetun Ajan Tarjoukset",
+  "special.comingSoon.title": "Tulossa Pian!",
+  "special.comingSoon.description": "Pysy kuulolla tulevista erikoistarjouksistamme ja kampanjoistamme. Meillä on jännittäviä tarjouksia tulossa sinulle!",
+  "special.loyalty.title": "Kanta-asiakasohjelma",
+  "special.loyalty.description": "Osta 12 Bánh Mì -voileipää ja saat seuraavan ilmaiseksi!",
+  "special.cta.title": "Valmis Tilaamaan?",
+  "special.cta.subtitle": "Älä missaa näitä upeita tarjouksia. Tilaa nyt Woltin tai Foodoran kautta!",
+  "special.cta.wolt": "Tilaa Woltista",
+  "special.cta.foodora": "Tilaa Foodorasta",
+  "special.terms": "* Ehdot pätevät. Tarjouksia ei voi yhdistää. Voimassa vain Saigon Sandwich Bakery, Turku."
 }

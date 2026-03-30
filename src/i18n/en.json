@@ -13,7 +13,7 @@
   "footer.address.title": "Address",
   "footer.address.description": "(near the bus station)",
   "footer.address.line": "20100 Turku, Finland",
-  "footer.address.open": "Open Wed-Sat 11:00-17:30",
+  "footer.address.open": "Open Tue-Sat 10:30-18:30",
 
   "nav.home": "Home",
   "nav.hour": "Order",
@@ -30,8 +30,8 @@
 
   "hour.title": "Operating Hours and Order Availability",
   "hour.operatingHoursText": "Saigon Sandwich Bakery operates through the following hours for orders on Wolt and Foodora:",
-  "hour.operatingDays1": "Wednesday to Saturday:",
-  "hour.operatingDays2": "Sunday, Monday, and Tuesday:",
+  "hour.operatingDays1": "Tuesday to Saturday:",
+  "hour.operatingDays2": "Sunday and Monday:",
   "hour.operatingHours": "Closed",
   "hour.orderAvailabilityText": "You can place orders during these hours on the following platforms:",
   "hour.orderOnWolt": "Order on Wolt",
@@ -126,5 +126,18 @@
   "chat.option3": "I don't know what to eat!",
   "chat.answer1": "Nice to meet you too :)",
   "chat.answer2": "Sure! You can go to Order in the navigation bar, then choose Wolt or Foodora to order!",
-  "chat.answer3": "I will recommend you to try Saigon Grilled Meat, which is the best seller of our store!"
+  "chat.answer3": "I will recommend you to try Saigon Grilled Meat, which is the best seller of our store!",
+
+  "special.title": "Special Offers",
+  "special.subtitle": "Take advantage of our exclusive deals and promotions",
+  "special.badge": "Limited Time Offers",
+  "special.comingSoon.title": "Coming Soon!",
+  "special.comingSoon.description": "Stay tuned for our upcoming special offers and promotions. We have exciting deals in store for you!",
+  "special.loyalty.title": "Loyalty Program",
+  "special.loyalty.description": "Buy 12 Bánh Mì sandwiches and get the next one free!",
+  "special.cta.title": "Ready to Order?",
+  "special.cta.subtitle": "Don't miss out on these amazing offers. Order now through Wolt or Foodora!",
+  "special.cta.wolt": "Order on Wolt",
+  "special.cta.foodora": "Order on Foodora",
+  "special.terms": "* Terms and conditions apply. Offers cannot be combined. Valid only at Saigon Sandwich Bakery, Turku."
 }

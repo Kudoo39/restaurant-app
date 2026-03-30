@@ -13,7 +13,7 @@
   "footer.address.title": "Địa Chỉ",
   "footer.address.description": "(gần trạm xe buýt)",
   "footer.address.line": "20100 Turku, Phần Lan",
-  "footer.address.open": "Mở cửa T4-T7 11:00-17:30",
+  "footer.address.open": "Mở cửa T3-T7 10:30-18:30",
 
   "nav.home": "Trang Chủ",
   "nav.hour": "Đặt Hàng",
@@ -30,8 +30,8 @@
 
   "hour.title": "Giờ Hoạt Động và Thời Gian Đặt Hàng",
   "hour.operatingHoursText": "Saigon Sandwich Bakery hoạt động trong các khung giờ sau để đặt hàng trên Wolt và Foodora:",
-  "hour.operatingDays1": "Từ Thứ Tư đến Thứ Bảy:",
-  "hour.operatingDays2": "Chủ Nhật, Thứ Hai và Thứ Ba:",
+  "hour.operatingDays1": "Từ Thứ Ba đến Thứ Bảy:",
+  "hour.operatingDays2": "Chủ Nhật và Thứ Hai:",
   "hour.operatingHours": "Đóng cửa",
   "hour.orderAvailabilityText": "Bạn có thể đặt hàng trong khung giờ này trên các nền tảng sau:",
   "hour.orderOnWolt": "Đặt hàng trên Wolt",
@@ -127,5 +127,18 @@
   "chat.option3": "Tôi không biết nên ăn gì!",
   "chat.answer1": "Tôi cũng vậy, rất vui gặp bạn :)",
   "chat.answer2": "Tất nhiên! Bạn có thể vào phần Đặt Hàng, sau đó chọn Wolt hoặc Foodora để đặt hàng!",
-  "chat.answer3": "Tôi sẽ gợi ý bạn thử Bánh Mì Thịt Nướng, đó là món bán chạy nhất của cửa hàng chúng tôi!"
+  "chat.answer3": "Tôi sẽ gợi ý bạn thử Bánh Mì Thịt Nướng, đó là món bán chạy nhất của cửa hàng chúng tôi!",
+
+  "special.title": "Ưu Đãi Đặc Biệt",
+  "special.subtitle": "Tận dụng các ưu đãi và khuyến mãi độc quyền của chúng tôi",
+  "special.badge": "Ưu Đãi Có Thời Hạn",
+  "special.comingSoon.title": "Sắp Ra Mắt!",
+  "special.comingSoon.description": "Hãy theo dõi các ưu đãi đặc biệt và khuyến mãi sắp tới của chúng tôi. Chúng tôi có những ưu đãi thú vị dành cho bạn!",
+  "special.loyalty.title": "Chương Trình Khách Hàng Thân Thiết",
+  "special.loyalty.description": "Mua 12 bánh mì và nhận miễn phí 1 ổ!",
+  "special.cta.title": "Sẵn Sàng Đặt Hàng?",
+  "special.cta.subtitle": "Đừng bỏ lỡ những ưu đãi tuyệt vời này. Đặt hàng ngay qua Wolt hoặc Foodora!",
+  "special.cta.wolt": "Đặt Hàng Trên Wolt",
+  "special.cta.foodora": "Đặt Hàng Trên Foodora",
+  "special.terms": "* Áp dụng điều khoản và điều kiện. Không thể kết hợp các ưu đãi. Chỉ có hiệu lực tại Saigon Sandwich Bakery, Turku."
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import wolt from '../../assets/wolt.jpg'
 import foodora from '../../assets/foodora.jpg'
 import './Hour.css'
@@ -16,7 +15,7 @@ const Hour = () => {
         <p>{t('hour.operatingHoursText')}</p>
         <ul>
           <li>
-            {t('hour.operatingDays1')} <h6>11:00 AM - 5:30 PM</h6>
+            {t('hour.operatingDays1')} <h6>10:30 AM - 6:30 PM</h6>
           </li>
           <li>
             {t('hour.operatingDays2')} <h6>{t('hour.operatingHours')}</h6>

@@ -12,13 +12,13 @@ const HomePage = () => {
   const features = [
     {
       image: img1,
-      title: 'Banh Mi',
+      title: 'Bánh mì',
       description: t('home.banhmiDescription'),
       gradient: 'from-orange-500/20 to-transparent',
     },
     {
       image: img2,
-      title: 'Pho',
+      title: 'Phở',
       description: t('home.phoDescription'),
       gradient: 'from-red-500/20 to-transparent',
     },
@@ -66,9 +66,9 @@ const HomePage = () => {
       <section className="section bg-neutral-cream">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="section-title">Our Specialties</h2>
+            <h2 className="section-title">{t('home.specialties')}</h2>
             <p className="section-subtitle">
-              Discover the authentic flavors that make us special
+              {t('home.specialtiesDescription')}
             </p>
           </div>
 
@@ -114,7 +114,7 @@ const HomePage = () => {
               {t('feedback.title')}
             </h2>
             <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto">
-              See what our customers are saying about us
+              {t('home.feedbackDescription')}
             </p>
           </div>
 
@@ -146,10 +146,10 @@ const HomePage = () => {
       <section className="section bg-gradient-warm text-neutral-black">
         <div className="container-custom text-center">
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
-            Ready to Experience Authentic Vietnamese Cuisine?
+            {t('home.orderTitle')}
           </h2>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Visit us today or order online through Wolt or Foodora
+            {t('home.orderDescription')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -158,15 +158,7 @@ const HomePage = () => {
               rel="noopener noreferrer"
               className="btn bg-neutral-black text-primary hover:bg-neutral-900 hover:shadow-2xl"
             >
-              Order on Wolt
-            </a>
-            <a
-              href="https://www.foodora.fi/restaurant/saigon-sandwich-bakery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn bg-white text-neutral-black hover:bg-neutral-100 hover:shadow-2xl"
-            >
-              Order on Foodora
+              {t('hour.orderOnWolt')}
             </a>
           </div>
         </div>

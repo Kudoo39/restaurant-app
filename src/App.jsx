@@ -1,5 +1,5 @@
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import Navigation from './components/layout/Navigation'
 import Footer from './components/layout/Footer'
 import ChatBot from './components/features/chat/ChatBot'
@@ -15,17 +15,24 @@ const HoursPage = lazy(() => import('./pages/HoursPage'))
 const SpecialPage = lazy(() => import('./pages/SpecialPage'))
 
 // Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="text-center">
-      <div className="spinner w-12 h-12 border-4 mx-auto mb-4"></div>
-      <p className="text-neutral-600">Loading...</p>
+const PageLoader = () => {
+  const { t } = useTranslation()
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="text-center">
+        <div className="spinner w-12 h-12 border-4 mx-auto mb-4"></div>
+        <p className="text-neutral-600">{t('ui.loading')}</p>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 const App = () => {
   const { i18n } = useTranslation()
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.resolvedLanguage || 'fi'
+  }, [i18n.resolvedLanguage])
 
   return (
     <Router>

@@ -20,19 +20,19 @@ const MenuCard = ({ item, featured = false }) => {
           {item.isVegan && (
             <span className="badge bg-green-500 text-white shadow-lg">
               <FaLeaf className="mr-1" />
-              Vegan
+              {t('menu.vegan')}
             </span>
           )}
           {item.isSpicy && (
             <span className="badge bg-red-500 text-white shadow-lg">
               <FaFire className="mr-1" />
-              Spicy
+              {t('menu.spicy')}
             </span>
           )}
           {featured && (
             <span className="badge bg-primary text-neutral-black shadow-lg">
               <FaStar className="mr-1" />
-              Popular
+              {t('menu.popular')}
             </span>
           )}
         </div>

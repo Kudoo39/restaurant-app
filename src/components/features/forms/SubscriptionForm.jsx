@@ -14,7 +14,7 @@ const SubscriptionForm = () => {
 
     if (!email || !email.includes('@')) {
       setStatus('error')
-      setMessage('Please enter a valid email address')
+      setMessage('ui.invalidEmail')
       return
     }
 
@@ -30,7 +30,7 @@ const SubscriptionForm = () => {
       )
 
       setStatus('success')
-      setMessage(t('subscriptionForm.thankYou'))
+      setMessage('subscriptionForm.thankYou')
       setEmail('')
 
       // Reset after 5 seconds
@@ -40,7 +40,7 @@ const SubscriptionForm = () => {
       }, 5000)
     } catch (error) {
       setStatus('error')
-      setMessage('Something went wrong. Please try again.')
+      setMessage('ui.subscriptionError')
       console.error('EmailJS Error:', error)
     }
   }
@@ -62,6 +62,7 @@ const SubscriptionForm = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-3">
           <input
+            aria-label={t('contact.email')}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -78,7 +79,7 @@ const SubscriptionForm = () => {
             {status === 'loading' ? (
               <>
                 <FaSpinner className="animate-spin mr-2" />
-                Subscribing...
+                {t('ui.subscribing')}
               </>
             ) : (
               t('subscriptionForm.buttonText')
@@ -90,14 +91,14 @@ const SubscriptionForm = () => {
         {status === 'success' && (
           <div className="flex items-center space-x-2 text-accent-success bg-green-50 rounded-lg p-4 animate-slide-down">
             <FaCheckCircle className="flex-shrink-0" />
-            <p className="text-sm font-medium">{message}</p>
+            <p className="text-sm font-medium">{t(message)}</p>
           </div>
         )}
 
         {status === 'error' && (
           <div className="flex items-center space-x-2 text-accent-error bg-red-50 rounded-lg p-4 animate-slide-down">
             <span className="flex-shrink-0">⚠️</span>
-            <p className="text-sm font-medium">{message}</p>
+            <p className="text-sm font-medium">{t(message)}</p>
           </div>
         )}
       </form>

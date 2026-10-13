@@ -5,7 +5,6 @@ import { FaTiktok } from "react-icons/fa";
 import { MdLocalShipping, MdOutlineMailOutline } from "react-icons/md";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { BsFillTelephoneFill, BsInstagram } from "react-icons/bs";
-import foodora from "../../assets/foodora1.jpg";
 import wolt from "../../assets/wolt1.jpg";
 import tiktok from "../../assets/tiktok.jpg";
 import facebook from "../../assets/facebook2.jpg";

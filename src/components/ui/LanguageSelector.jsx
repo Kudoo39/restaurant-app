@@ -4,9 +4,9 @@ const LanguageSelector = () => {
   const { i18n } = useTranslation()
 
   const languages = [
-    { code: 'fi', label: 'FI', flag: '🇫🇮' },
-    { code: 'en', label: 'EN', flag: '🇬🇧' },
-    { code: 'vi', label: 'VI', flag: '🇻🇳' },
+    { code: 'fi', label: 'FI', flag: '🇫🇮', name: 'Suomi' },
+    { code: 'en', label: 'EN', flag: '🇬🇧', name: 'English' },
+    { code: 'vi', label: 'VI', flag: '🇻🇳', name: 'Tiếng Việt' },
   ]
 
   return (
@@ -20,7 +20,8 @@ const LanguageSelector = () => {
               ? 'bg-primary text-neutral-black shadow-md'
               : 'text-primary hover:text-white hover:bg-neutral-800'
           }`}
-          aria-label={`Switch to ${lang.label}`}
+          aria-label={lang.name}
+          aria-pressed={i18n.language === lang.code}
         >
           <span className="hidden sm:inline mr-1">{lang.flag}</span>
           {lang.label}

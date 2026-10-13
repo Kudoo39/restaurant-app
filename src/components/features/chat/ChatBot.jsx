@@ -59,7 +59,7 @@ const ChatBotComponent = () => {
         <button
           onClick={() => setIsOpen(true)}
           className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-white rounded-full shadow-2xl hover:shadow-warm-lg transition-all duration-300 hover:scale-110 flex items-center justify-center group border-2 border-primary"
-          aria-label="Open chat"
+          aria-label={t('chat.open')}
         >
           <img
             src={img}
@@ -84,15 +84,15 @@ const ChatBotComponent = () => {
                 />
                 <div>
                   <h3 className="font-heading font-bold text-neutral-black">
-                    Saigon Assistant
+                    {t('chat.title')}
                   </h3>
-                  <p className="text-xs text-neutral-700">Online now</p>
+                  <p className="text-xs text-neutral-700">{t('chat.ready')}</p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 className="w-8 h-8 rounded-full bg-neutral-black/10 hover:bg-neutral-black/20 flex items-center justify-center transition-colors"
-                aria-label="Close chat"
+                aria-label={t('chat.close')}
               >
                 <FaTimes className="text-neutral-black" />
               </button>
@@ -105,7 +105,7 @@ const ChatBotComponent = () => {
                 botAvatar={img}
                 hideHeader={true}
                 hideSubmitButton={true}
-                placeholder="Type a message..."
+                placeholder={t('chat.placeholder')}
                 style={{
                   width: '100%',
                   height: '400px',

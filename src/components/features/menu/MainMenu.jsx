@@ -88,18 +88,18 @@ const MainMenu = () => {
     <div className="animate-fade-in">
       <div className="mb-8">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-black mb-2">
-          Main Dishes
+          {t('menu.mainTitle')}
         </h2>
         <p className="text-neutral-600">
-          Our signature Bánh Mì sandwiches and Vietnamese specialties
+          {t('menu.mainDescription')}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="main-menu-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {menuItems.map((item, index) => (
           <div
             key={item.id}
-            className="animate-slide-up"
+            className="min-w-0 animate-slide-up"
             style={{ animationDelay: `${index * 0.05}s` }}
           >
             <MenuCard item={item} featured={item.featured} />

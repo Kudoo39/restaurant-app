@@ -19,7 +19,7 @@ const MenuPage = () => {
   ]
 
   const isActive = (path) => {
-    if (path === '' && location.pathname === '/') {
+    if (path === '' && ['/', '/menu'].includes(location.pathname)) {
       return true
     }
     return location.pathname === `/${path}`
@@ -38,10 +38,10 @@ const MenuPage = () => {
       <section className="section-title-area bg-gradient-to-b from-neutral-100 to-neutral-cream py-12">
         <div className="container-custom text-center">
           <h1 className="text-5xl md:text-6xl font-heading font-bold text-neutral-black mb-4">
-            Our Menu
+            {t('menu.title')}
           </h1>
           <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto">
-            Explore our authentic Vietnamese dishes, made fresh daily with traditional recipes
+            {t('menu.subtitle')}
           </p>
         </div>
       </section>
@@ -49,21 +49,24 @@ const MenuPage = () => {
       {/* Category Navigation */}
       <div className="sticky top-20 z-40 bg-white shadow-md border-b border-neutral-200">
         <div className="container-custom">
-          <div className="flex items-center justify-center gap-2 py-4 overflow-x-auto scrollbar-hide">
-            {categories.map((category) => (
-              <Link
-                key={category.path}
-                to={category.path}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full font-semibold text-base transition-all duration-300 whitespace-nowrap ${
-                  isActive(category.path)
-                    ? 'bg-primary text-neutral-black shadow-warm scale-105'
-                    : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 hover:scale-105'
-                }`}
-              >
-                <span className="text-xl">{category.icon}</span>
-                <span>{category.label}</span>
-              </Link>
-            ))}
+          <div className="menu-category-scroll overflow-x-auto scrollbar-hide">
+            <div className="flex w-max min-w-full items-center justify-center gap-2 px-2 py-4">
+              {categories.map((category) => (
+                <Link
+                  key={category.path}
+                  to={`/${category.path}`}
+                  aria-current={isActive(category.path) ? 'page' : undefined}
+                  className={`shrink-0 flex items-center space-x-2 px-6 py-3 rounded-full font-semibold text-base transition-all duration-300 whitespace-nowrap ${
+                    isActive(category.path)
+                      ? 'bg-primary text-neutral-black shadow-warm scale-105'
+                      : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200 hover:scale-105'
+                  }`}
+                >
+                  <span className="text-xl">{category.icon}</span>
+                  <span>{category.label}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -72,6 +75,7 @@ const MenuPage = () => {
       <div className="container-custom py-12">
         <Routes>
           <Route index element={<MainMenu />} />
+          <Route path="menu" element={<MainMenu />} />
           <Route path="bao" element={<BaoMenu />} />
           <Route path="salad" element={<SaladMenu />} />
           <Route path="drink" element={<DrinkMenu />} />
@@ -87,16 +91,17 @@ const MenuPage = () => {
               <span className="font-semibold text-blue-600">{t('menu.news')}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-black mb-2">
-              Latest Updates
+              {t('menu.news')}
             </h2>
             <p className="text-neutral-600">
-              Follow us on Facebook for daily specials and news
+              {t('menu.follow')}
             </p>
           </div>
 
           <div className="max-w-2xl mx-auto">
             <div className="bg-neutral-100 rounded-2xl overflow-hidden shadow-lg">
               <iframe
+                title={t('menu.news')}
                 src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsaigonbakeryturku&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                 width="100%"
                 height="600"

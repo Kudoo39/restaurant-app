@@ -1,16 +1,16 @@
 import { useTranslation } from 'react-i18next'
-import { FaStar, FaGift, FaPercent } from 'react-icons/fa'
+import { FaStar, FaGift, FaGraduationCap } from 'react-icons/fa'
 
 const SpecialPage = () => {
   const { t } = useTranslation()
 
   const specials = [
     {
-      icon: FaGift,
-      title: t('special.comingSoon.title'),
-      description: t('special.comingSoon.description'),
-      color: 'bg-green-500',
-      gradient: 'from-green-500 to-green-600',
+      icon: FaGraduationCap,
+      title: t('special.student.title'),
+      description: t('special.student.description'),
+      color: 'bg-emerald-700',
+      gradient: 'from-emerald-700 to-emerald-800',
     },
     {
       icon: FaStar,
@@ -18,6 +18,14 @@ const SpecialPage = () => {
       description: t('special.loyalty.description'),
       color: 'bg-primary',
       gradient: 'from-primary to-primary-dark',
+    },
+    {
+      icon: FaGift,
+      title: t('special.comingSoon.title'),
+      description: t('special.comingSoon.description'),
+      color: 'bg-sky-700',
+      gradient: 'from-sky-700 to-sky-800',
+      comingSoon: true,
     },
   ]
 
@@ -41,10 +49,10 @@ const SpecialPage = () => {
           {specials.map((special, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-slide-up"
+              className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 animate-slide-up ${special.comingSoon ? 'md:col-span-2' : ''}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`bg-gradient-to-br ${special.gradient} p-8 text-center`}>
+              <div className={`${special.color} bg-gradient-to-br ${special.gradient} p-8 text-center`}>
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-xl">
                   <special.icon className="text-4xl text-neutral-black" />
                 </div>
@@ -78,14 +86,6 @@ const SpecialPage = () => {
                 className="btn bg-neutral-black text-primary hover:bg-neutral-900 hover:shadow-2xl"
               >
                 {t('special.cta.wolt')}
-              </a>
-              <a
-                href="https://www.foodora.fi/restaurant/saigon-sandwich-bakery"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn bg-white text-neutral-black hover:bg-neutral-100 hover:shadow-2xl"
-              >
-                {t('special.cta.foodora')}
               </a>
             </div>
           </div>

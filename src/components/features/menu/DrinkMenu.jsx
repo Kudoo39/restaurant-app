@@ -60,10 +60,10 @@ const DrinkMenu = () => {
     <div className="animate-fade-in">
       <div className="mb-8">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-black mb-2">
-          Beverages
+          {t('menu.drinkTitle')}
         </h2>
         <p className="text-neutral-600">
-          Refresh yourself with our selection of drinks and Vietnamese coffee
+          {t('menu.drinkDescription')}
         </p>
       </div>
 

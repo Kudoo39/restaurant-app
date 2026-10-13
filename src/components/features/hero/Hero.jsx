@@ -6,9 +6,9 @@ const Hero = () => {
   const { t } = useTranslation()
 
   const features = [
-    { icon: FaUtensils, text: 'Authentic Vietnamese' },
-    { icon: FaLeaf, text: 'Fresh Ingredients' },
-    { icon: FaFire, text: 'Made to Order' },
+    { icon: FaUtensils, text: t('hero.authentic') },
+    { icon: FaLeaf, text: t('hero.fresh') },
+    { icon: FaFire, text: t('hero.madeToOrder') },
   ]
 
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-8 animate-fade-in">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-            <span className="text-sm font-semibold text-primary">Turku's Authentic Vietnamese Restaurant</span>
+            <span className="text-sm font-semibold text-primary">{t('hero.badge')}</span>
           </div>
 
           {/* Main Heading */}
@@ -38,7 +38,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Experience the authentic taste of Vietnam with our freshly baked <span className="text-primary font-semibold">Bánh Mì</span> and traditional dishes
+            {t('hero.description')}
           </p>
 
           {/* Features */}
@@ -57,11 +57,11 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <Link to="/menu" className="btn-primary group">
-              View Menu
+              {t('hero.menu')}
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link to="/hour" className="btn-outline">
-              Order Now
+              {t('nav.hour')}
             </Link>
           </div>
 

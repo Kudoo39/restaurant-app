@@ -11,12 +11,6 @@ const HoursPage = () => {
       color: 'bg-blue-500',
       hoverColor: 'hover:bg-blue-600',
     },
-    {
-      name: 'Foodora',
-      url: 'https://www.foodora.fi/restaurant/saigon-sandwich-bakery',
-      color: 'bg-pink-500',
-      hoverColor: 'hover:bg-pink-600',
-    },
   ]
 
   return (
@@ -36,7 +30,7 @@ const HoursPage = () => {
             <div className="bg-gradient-warm p-8 text-center">
               <FaClock className="text-5xl text-neutral-black mx-auto mb-4" />
               <h2 className="text-3xl font-heading font-bold text-neutral-black">
-                Opening Hours
+                {t('footer.hours')}
               </h2>
             </div>
 
@@ -51,7 +45,7 @@ const HoursPage = () => {
                     {t('hour.operatingDays1')}
                   </h3>
                   <p className="text-2xl font-bold text-green-600">
-                    10:30 - 18:30
+                    {t('hour.time')}
                   </p>
                 </div>
               </div>
@@ -81,10 +75,10 @@ const HoursPage = () => {
               {t('hour.orderAvailabilityText')}
             </h2>
             <p className="text-neutral-400 mb-8 max-w-2xl mx-auto">
-              Order your favorite Vietnamese dishes for delivery or pickup through our partner platforms
+              {t('hour.deliveryDescription')}
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 max-w-xl mx-auto">
               {orderingPlatforms.map((platform) => (
                 <a
                   key={platform.name}

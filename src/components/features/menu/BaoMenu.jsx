@@ -17,10 +17,10 @@ const BaoMenu = () => {
     <div className="animate-fade-in">
       <div className="mb-8">
         <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-black mb-2">
-          Bao Buns
+          {t('menu.baoTitle')}
         </h2>
         <p className="text-neutral-600">
-          Fluffy steamed bao buns filled with Vietnamese flavors
+          {t('menu.baoDescription')}
         </p>
       </div>
 
@@ -30,15 +30,15 @@ const BaoMenu = () => {
         <div className="rounded-2xl overflow-hidden shadow-xl sticky top-32 order-2 lg:order-1">
           <img
             src={img}
-            alt="Bao Buns"
+            alt={t('menu.baoTitle')}
             className="w-full h-80 object-cover"
           />
           <div className="bg-neutral-black p-6 text-center">
             <p className="text-primary font-heading text-xl font-bold">
-              Steamed to Perfection
+              {t('menu.baoCaption')}
             </p>
             <p className="text-neutral-400 text-sm mt-1">
-              Soft, fluffy, and filled with authentic flavors
+              {t('menu.baoCaptionDescription')}
             </p>
           </div>
         </div>
@@ -52,21 +52,21 @@ const BaoMenu = () => {
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2 mb-1">
                     <span className="text-neutral-500 font-mono text-sm">#{item.id}</span>
                     <h3 className="text-lg md:text-xl font-heading font-bold text-neutral-black group-hover:text-primary transition-colors">
                       {item.name}
                     </h3>
                     {item.isVegan && (
-                      <span className="badge bg-green-100 text-green-700 text-xs">🌱 Vegan</span>
+                      <span className="badge bg-green-100 text-green-700 text-xs">🌱 {t('menu.vegan')}</span>
                     )}
                     {item.isSpicy && (
-                      <span className="badge bg-red-100 text-red-700 text-xs">🌶️ Spicy</span>
+                      <span className="badge bg-red-100 text-red-700 text-xs">🌶️ {t('menu.spicy')}</span>
                     )}
                   </div>
                 </div>
-                <span className="text-2xl font-bold text-primary font-heading ml-4">
+                <span className="shrink-0 text-2xl font-bold text-primary font-heading ml-4">
                   {item.price}
                 </span>
               </div>

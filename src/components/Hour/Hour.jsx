@@ -1,5 +1,4 @@
 import wolt from '../../assets/wolt.jpg'
-import foodora from '../../assets/foodora.jpg'
 import './Hour.css'
 import { useTranslation } from 'react-i18next'
 import SubscriptionForm from '../SubscriptionForm'
@@ -32,17 +31,6 @@ const Hour = () => {
             >
               <img src={wolt} alt="Wolt Logo" />
               <span>{t('hour.orderOnWolt')}</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.foodora.fi/en/restaurant/s6bc/saigon-sandwich"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="logo-link foodora-logo"
-            >
-              <img src={foodora} alt="Foodora Logo" />
-              <span>{t('hour.orderOnFoodora')}a</span>
             </a>
           </li>
         </ul>

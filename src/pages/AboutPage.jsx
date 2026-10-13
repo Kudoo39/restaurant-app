@@ -81,34 +81,34 @@ const AboutPage = () => {
         <div className="max-w-5xl mx-auto">
           <div className="bg-neutral-black rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-8">
-              Our Values
+              {t('about.values.title')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="space-y-3">
                 <div className="text-5xl">🌟</div>
                 <h3 className="text-xl font-heading font-bold text-primary">
-                  Authenticity
+                  {t('about.values.authentic')}
                 </h3>
                 <p className="text-neutral-400">
-                  Traditional Vietnamese recipes passed down through generations
+                  {t('about.values.authenticDescription')}
                 </p>
               </div>
               <div className="space-y-3">
                 <div className="text-5xl">🌱</div>
                 <h3 className="text-xl font-heading font-bold text-primary">
-                  Fresh Ingredients
+                  {t('about.values.fresh')}
                 </h3>
                 <p className="text-neutral-400">
-                  We use only the freshest, highest quality ingredients daily
+                  {t('about.values.freshDescription')}
                 </p>
               </div>
               <div className="space-y-3">
                 <div className="text-5xl">❤️</div>
                 <h3 className="text-xl font-heading font-bold text-primary">
-                  Made with Love
+                  {t('about.values.care')}
                 </h3>
                 <p className="text-neutral-400">
-                  Every dish is prepared with care and passion for Vietnamese cuisine
+                  {t('about.values.careDescription')}
                 </p>
               </div>
             </div>

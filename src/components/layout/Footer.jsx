@@ -33,7 +33,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm leading-relaxed">
-              Authentic Vietnamese flavors in the heart of Turku. Experience the taste of Saigon with our freshly baked bánh mì and traditional dishes.
+              {t('footer.description')}
             </p>
             {/* Social Links */}
             <div className="flex space-x-3">
@@ -54,7 +54,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-heading font-bold text-white mb-4">Quick Links</h3>
+            <h3 className="text-lg font-heading font-bold text-white mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -72,7 +72,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-heading font-bold text-white mb-4">Contact</h3>
+            <h3 className="text-lg font-heading font-bold text-white mb-4">{t('nav.contact')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-sm">
                 <FaMapMarkerAlt className="text-primary mt-1 flex-shrink-0" />
@@ -99,13 +99,13 @@ const Footer = () => {
 
           {/* Opening Hours */}
           <div>
-            <h3 className="text-lg font-heading font-bold text-white mb-4">Opening Hours</h3>
+            <h3 className="text-lg font-heading font-bold text-white mb-4">{t('footer.hours')}</h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-3">
                 <FaClock className="text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-white">{t('hour.operatingDays1')}</p>
-                  <p className="text-primary">10:30 - 18:30</p>
+                  <p className="text-primary">{t('hour.time')}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -123,7 +123,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-neutral-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-neutral-500">
-              © {new Date().getFullYear()} Saigon Sandwich Bakery. All rights reserved.
+              {t('footer.rights', { year: new Date().getFullYear() })}
             </p>
             {/* <div className="flex items-center space-x-6 text-sm">
               <Link to="/privacy" className="hover:text-primary transition-colors">

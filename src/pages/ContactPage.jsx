@@ -16,10 +16,10 @@ const ContactPage = () => {
 
   const validateForm = () => {
     const newErrors = {}
-    if (!formData.name.trim()) newErrors.name = 'Name is required'
-    if (!formData.email.trim()) newErrors.email = 'Email is required'
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-    if (!formData.message.trim()) newErrors.message = 'Message is required'
+    if (!formData.name.trim()) newErrors.name = 'contact.nameRequired'
+    if (!formData.email.trim()) newErrors.email = 'contact.emailRequired'
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'ui.invalidEmail'
+    if (!formData.message.trim()) newErrors.message = 'contact.messageRequired'
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -98,7 +98,7 @@ const ContactPage = () => {
                   />
                 </div>
                 {errors.name && (
-                  <p className="text-accent-error text-sm mt-1">{errors.name}</p>
+                  <p className="text-accent-error text-sm mt-1">{t(errors.name)}</p>
                 )}
               </div>
 
@@ -120,7 +120,7 @@ const ContactPage = () => {
                   />
                 </div>
                 {errors.email && (
-                  <p className="text-accent-error text-sm mt-1">{errors.email}</p>
+                  <p className="text-accent-error text-sm mt-1">{t(errors.email)}</p>
                 )}
               </div>
 
@@ -161,7 +161,7 @@ const ContactPage = () => {
                   />
                 </div>
                 {errors.message && (
-                  <p className="text-accent-error text-sm mt-1">{errors.message}</p>
+                  <p className="text-accent-error text-sm mt-1">{t(errors.message)}</p>
                 )}
               </div>
 
@@ -174,7 +174,7 @@ const ContactPage = () => {
                 {status === 'loading' ? (
                   <>
                     <FaSpinner className="animate-spin mr-2" />
-                    Sending...
+                    {t('ui.sending')}
                   </>
                 ) : (
                   t('contact.submit')
@@ -192,7 +192,7 @@ const ContactPage = () => {
               {status === 'error' && (
                 <div className="flex items-center space-x-2 text-accent-error bg-red-50 rounded-lg p-4 animate-slide-down">
                   <span className="flex-shrink-0">⚠️</span>
-                  <p className="text-sm font-medium">Something went wrong. Please try again.</p>
+                  <p className="text-sm font-medium">{t('ui.contactError')}</p>
                 </div>
               )}
             </form>
